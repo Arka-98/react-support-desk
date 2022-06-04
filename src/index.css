@@ -1,13 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer base {
+  body {
+    @apply h-screen
+  }
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  height: 100%;
 }
+
+.animate__animated {
+  --animate-duration: 0.3s;
+}
+
+.grid-container {
+  /* width: 100%; */
+  /* max-width: 960px;
+  margin: 100px auto;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 150px); */
+  /* grid-template-rows: 1fr 2fr 1fr; */
+  /* column-gap: 5px;
+  row-gap: 10px; */
+  /* align-items: center; */
+  /* justify-items: center; */
+  /* grid-auto-rows: minmax(100px, auto); */
+  /* gap: 5px; */
+}
+
+/* .grid-container p {
+  padding: 20px;
+  background-color: darkslateblue;
+  color: aliceblue;
+  border: 1px solid orange;
+} */

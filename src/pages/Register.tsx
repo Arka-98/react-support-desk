@@ -6,7 +6,6 @@ import Input from '../components/inputs/Input'
 import { FaCheck, FaUserPlus } from 'react-icons/fa'
 import { CgSpinner } from 'react-icons/cg'
 import { useAppDispatch, useAppSelector } from '../app/redux-hooks'
-import { useSelector } from 'react-redux'
 import { register, reset } from '../features/authSlice'
 import { useNavigate } from 'react-router-dom'
 import Radio from '../components/inputs/Radio'
@@ -61,6 +60,9 @@ function Register() {
         const { name, value } = e.target
         dispatch({ type: FORM_ACTIONS.TRIM_INPUT, payload: {name, value} })
         dispatch({ type: FORM_ACTIONS.VALIDATE_INPUT, payload: {name, value} })
+        if (name === 'password' || name === 'confPassword') {
+            dispatch({ type: FORM_ACTIONS.CHECK_PASSWORDS, payload: {name, value} })
+        }
     }
     const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
         e.preventDefault()

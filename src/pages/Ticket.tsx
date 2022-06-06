@@ -57,7 +57,7 @@ function Ticket() {
     const handleNoteSubmit = async (text: string) => {
         await reduxDispatch(createNote({ text }))
         await reduxDispatch(getNotesByTicketId(parseInt(ticketId!)))
-        if(user?.is_staff && ticket?.status === 'new') {
+        if((user?.is_staff || user?.is_admin) && ticket?.status === 'new') {
             reduxDispatch(changeTicketStatus('open'))
         }
         setIsNoteModalOpen(false)

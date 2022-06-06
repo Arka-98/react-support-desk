@@ -31,9 +31,9 @@ function AdminViewTickets() {
         reduxDispatch(getTicketsWithUserAndStaffName())
     }, [])
 
-    const countNewTickets = (): number => {
+    const countTickets = (status: string[]): number => {
         let count = 0
-        tickets?.forEach(ticket => ticket.status === 'new' && count++ )
+        tickets?.forEach(ticket => status.includes(ticket.status) && count++ )
         return count
     }
 
@@ -47,8 +47,8 @@ function AdminViewTickets() {
                 <div className='text-3xl font-bold flex gap-2 items-center'>
                 <p>
                 {
-                    (countNewTickets()! > 0) ? `${tickets?.length} Unresolved, ${countNewTickets()} New ${countNewTickets() === 1 ? 'Ticket' : 'Tickets'}` :
-                    ((tickets?.length || 0) > 0) ? `${tickets?.length} Unresolved ${tickets?.length === 1 ? 'Ticket' : 'Tickets'}` :
+                    (countTickets(['new'])! > 0) ? `${countTickets(['new', 'open'])} Unresolved, ${countTickets(['new'])} New ${countTickets(['new']) === 1 ? 'Ticket' : 'Tickets'}` :
+                    ((countTickets(['new', 'open']) || 0) > 0) ? `${countTickets(['new', 'open'])} Unresolved ${countTickets(['new', 'open']) === 1 ? 'Ticket' : 'Tickets'}` :
                     `All tickets resolved!`
                 }
                 </p>

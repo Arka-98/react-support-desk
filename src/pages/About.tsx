@@ -28,6 +28,7 @@ function About() {
         <ul className='list-disc'>
             <li>Used Typescript to ensure error free code and better intellisense</li>
             <li>Used Redux Toolkit to manage states and fetch data from backend throughout the application</li>
+            <li>Auto login / logout with the help of localStorage</li>
             <li>Developed custom hooks from scratch for form input validation and authentication</li>
             <li>Real time form input validation and custom input error handling</li>
             <li>Developed efficient SQL queries on the backend for querying the DB</li>

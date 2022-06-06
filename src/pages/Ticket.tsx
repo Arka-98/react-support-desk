@@ -47,9 +47,9 @@ function Ticket() {
         })
     }, [])
 
-    const handleClose: React.MouseEventHandler<HTMLButtonElement> = (e) => {
-        reduxDispatch(closeTicket(parseInt(ticketId!)))
-        reduxDispatch(getTicketById(parseInt(ticketId!)))
+    const handleClose: React.MouseEventHandler<HTMLButtonElement> = async (e) => {
+        await reduxDispatch(closeTicket(parseInt(ticketId!)))
+        await reduxDispatch(getTicketById(parseInt(ticketId!)))
         setIsModalOpen(false)
         toast.success('Ticket closed', { autoClose: 3000 })
     }

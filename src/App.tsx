@@ -19,6 +19,7 @@ import 'animate.css'
 import 'react-toastify/dist/ReactToastify.css';
 import ViewUsers from './pages/ViewUsers';
 import AdminViewTickets from './pages/AdminViewTickets';
+import About from './pages/About';
 
 let logoutTimer: NodeJS.Timeout
 
@@ -44,6 +45,7 @@ function App() {
         <Routes>
           <Route element={<PageLayout/>}>
             <Route index element={<Home/>}/>
+            <Route path='/about' element={<About/>}/>
             <Route path='/login' element={<Login/>}/>
             <Route path='/register' element={<Register/>}/>
             <Route element={<PrivateRoute/>}>

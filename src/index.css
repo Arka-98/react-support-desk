@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 /* @layer base {
-  body {
-    @apply h-screen
+  html {
+    @apply h-screen relative
   }
 } */
 

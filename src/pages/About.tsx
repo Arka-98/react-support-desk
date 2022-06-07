@@ -26,8 +26,8 @@ function About() {
         </ul>
         <p className='font-medium text-lg'>Some features of my application are - </p>
         <ul className='list-disc'>
-            <li>Used Typescript to ensure error free code and better intellisense</li>
-            <li>Used Redux Toolkit to manage states and fetch data from backend throughout the application</li>
+            <li>Fully responsive UI built from scratch using Tailwind CSS 3</li>
+            <li>Used Redux Toolkit + Typescript to manage states and fetch data from backend throughout the application</li>
             <li>Auto login / logout with the help of localStorage</li>
             <li>Developed custom hooks from scratch for form input validation and authentication</li>
             <li>Real time form input validation and custom input error handling</li>
